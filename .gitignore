@@ -1,3 +1,4 @@
-core/routes
-core/functions
-core/config
+Core/
+config.php
+functions.php
+routes.php
