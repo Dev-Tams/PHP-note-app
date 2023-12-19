@@ -1,5 +1,5 @@
 <?php
-
+use Core\Database;
 require '../controller/nav.controller.php';
 
 $config = require ref_path(('config.php'));

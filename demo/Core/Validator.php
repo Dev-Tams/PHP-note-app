@@ -1,5 +1,5 @@
 <?php
-
+namespace Core;
 class Validator{
 
     public static function text($value){

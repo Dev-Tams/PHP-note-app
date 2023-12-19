@@ -1,4 +1,6 @@
 <?php
+use Core\Database;
+use Core\Validator;
 require core('Validator.php');
 
 
