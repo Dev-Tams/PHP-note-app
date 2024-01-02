@@ -6,7 +6,9 @@
     <title>Home</title>
     
 </head>
+<?php 
 
+?>
 <body>
     <h1> Hello World</h1>
     <!-- Basic syntaxing and conditional statement -->

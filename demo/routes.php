@@ -24,3 +24,5 @@ $router->get("/notes","controller/notes/index.php");
 $router->get("/note/create","controller/notes/index.php");
 $router->get("/note","controller/notes/show.php");
 
+$router->delete("/note","controller/notes/destroy.php");
+
