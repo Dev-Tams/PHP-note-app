@@ -1,15 +1,18 @@
 <?php
 
 
+use Core\App;
 use Core\Database;
+
 use Core\Validator;
+
 require core('Validator.php');
 
+$db = App::resolve(Database::class);
 
 
-$config = require ref_path('config.php');
-$db = new Database($config["Database"]);
-require '../controller/nav.controller.php';
+
+
 
 
 

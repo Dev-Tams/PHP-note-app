@@ -1,10 +1,13 @@
 <?php
-use Core\Database;
+
 require '../controller/nav.controller.php';
 
-$config = require ref_path(('config.php'));
-$db = new Database($config["Database"]);
+use Core\App;
+use Core\Database;
 
+
+
+$db = App::resolve(Database::class);
 
 
 $query= "SELECT * from notes where user_id = 1";

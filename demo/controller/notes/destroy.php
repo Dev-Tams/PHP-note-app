@@ -1,8 +1,10 @@
 <?php
+use Core\App;
 use Core\Database;
 
-$config = require ref_path('config.php');
-$db = new Database($config["Database"]);
+
+
+$db = App::resolve(Database::class);
 
 
 
