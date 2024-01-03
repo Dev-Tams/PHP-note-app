@@ -15,7 +15,7 @@
         margin-left: 30px;
     }
 </style>
-<form action="" method="post">
+<form method="post" action="/notes">
 <label for="create" bg-color:red;>Descripion</label>
     <textarea placeholder="write here!"
      style="display: block; color:black;" 
