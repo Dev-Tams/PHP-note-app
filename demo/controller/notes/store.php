@@ -12,12 +12,8 @@ $db = App::resolve(Database::class);
 
 
 
-
-
-
-
 $error=[];
-    
+
 
     if (Validator::text($_POST['header'])){
         $error['header']='this input is required';
@@ -31,7 +27,7 @@ $error=[];
     if(empty($error)){
     $db->query("INSERT INTO notes (header, user_id) VALUES( :header, :user_id)",[
         'header'=> $_POST['header'],
-        'user_id' => 1
+        'user_id' => 2
     ]);
 
     if(!empty($error)){
@@ -40,6 +36,7 @@ $error=[];
         ['note' => $note]);
         }
 
-    header('location: /notes');
-    die();
+    
 }
+ header('location: /notes');
+  die();

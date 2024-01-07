@@ -13,7 +13,7 @@
     <p>  <?= htmlspecialchars($note['header'])?></p>
 
 
-    <form action="" method="post">
+    <form action="/note" method="post">
         <input type="hidden" name="_method" value="DELETE">
         <input type="hidden" name="id" value=" <?= $note['id']?>" >
         <button style="color: red;"> Delete</button>
