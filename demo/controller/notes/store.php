@@ -27,16 +27,18 @@ $error=[];
     if(empty($error)){
     $db->query("INSERT INTO notes (header, user_id) VALUES( :header, :user_id)",[
         'header'=> $_POST['header'],
-        'user_id' => 2
+        'user_id' => 1
     ]);
 
     if(!empty($error)){
 
-       return view('notes/show.php',
-        ['note' => $note]);
-        }
+        return view('note/show.php', [
+            'error' => $error,
+            'note' => $note
+        ]);
 
     
 }
+    }
  header('location: /notes');
   die();

@@ -10,7 +10,7 @@ use Core\Database;
 $db = App::resolve(Database::class);
 
 
-$query= "SELECT * from notes where user_id = 2";
+$query= "SELECT * from notes where user_id = 1";
 $notes = $db->query($query)->get();
 
  view('notes/index.php', [
