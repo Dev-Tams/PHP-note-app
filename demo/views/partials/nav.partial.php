@@ -9,7 +9,8 @@
         </ul>
        
     </nav>
-    
+    <p> Hello <b> <?= $_SESSION['name'] ?? 'Guest,'?></b> Welcome</p>
+
 <!-- <nav>
     <li>
         <a href="home" class="<?= urlIs('/')?>"> Home</a>
