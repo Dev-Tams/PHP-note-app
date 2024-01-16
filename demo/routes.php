@@ -30,3 +30,5 @@ $router->patch("/note","controller/notes/update.php");
 $router->post("/notes","controller/notes/store.php");
 $router->delete("/note","controller/notes/destroy.php");
 
+$router->get("/register", "controller/reg-user/create.php");
+$router->post("/register", "controller/reg-user/store.php");
