@@ -7,17 +7,17 @@ use Core\Database;
 
 
 
-// $db = App::resolve(Database::class);
+$db = App::resolve(Database::class);
 
 
-// $query= "SELECT * from notes where user_id = 1";
-// $notes = $db->query($query)->get();
+$query= "SELECT * from notes where user_id = 1";
+$notes = $db->query($query)->get();
 
 view('notes/error.php', [
-     //'notes' => $notes
+     'notes' => $notes
 ] );
 
-//require '../views/notes/index.php';
+require '../views/notes/index.php';
 
 
 
