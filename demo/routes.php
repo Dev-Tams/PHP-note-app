@@ -21,9 +21,9 @@ $router->get("/about","controller/about.php");
 $router->get("/contact","controller/contact.php");
 
 $router->get("/notes","controller/notes/index.php");
-// $router->get("/note/create","controller/notes/create.php");
-// $router->get("/note","controller/notes/show.php");
-// $router->get("/note/edit","controller/notes/edit.php");
+$router->get("/note/create","controller/notes/create.php");
+$router->get("/note","controller/notes/show.php");
+$router->get("/note/edit","controller/notes/edit.php");
 
 
 $router->patch("/note","controller/notes/update.php");

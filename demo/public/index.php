@@ -8,6 +8,7 @@ spl_autoload_register(function ($class){
 
     require base_path($class .'.php');
 });
+
 require BASE_PATH.('Core/functions.php');
 
 require base_path('Core/Router.php');

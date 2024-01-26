@@ -1,44 +1,27 @@
 <?php
 
-
 use Core\App;
+use Core\Validator;
 use Core\Database;
 
-use Core\Validator;
-
-require core('Validator.php');
-
 $db = App::resolve(Database::class);
+$errors = [];
 
-
-
-$error=[];
-
-
-    if (Validator::text($_POST['header'])){
-        $error['header']='this input is required';
-    }
-    if(Validator::maxinput($_POST['header'])){
-        $error['header']="character is above 3500";
-    }
-    if(Validator::mininput($_POST['header'])){
-        $error['header']='character is less than 10';
-    }
-    if(empty($error)){
-    $db->query("INSERT INTO notes (header, user_id) VALUES( :header, :user_id)",[
-        'header'=> $_POST['header'],
-        'user_id' => 1
-    ]);
-
-    if(!empty($error)){
-
-        return view('note/show.php', [
-            'error' => $error,
-            'note' => $note
-        ]);
-
-    
+if (! Validator::text($_POST['header'], 1, 1000)) {
+    $errors['header'] = 'A body of no more than 1,000 characters is required.';
 }
-    }
- header('location: /notes');
-  die();
+
+if (! empty($errors)) {
+    return view("notes/create.php", [
+        'errors' => $errors
+        
+    ]);
+}
+
+$db->query('INSERT INTO notes(header, user_id) VALUES(:header, :user_id)', [
+    'header' => $_POST['header'],
+    'user_id' => 1
+]);
+
+header('location: /notes');
+die();

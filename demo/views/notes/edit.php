@@ -31,11 +31,11 @@
     <input type="hidden" name="id" value=" <?= $note['id']?>" >
 
     
-<label for="create" bg-color:red;>Edit</label>
+<label for="edit" bg-color:red;>Edit</label>
     <textarea  
-      name="header" id="create" ><?= $note['header'] ?></textarea>
+      name="header" id="edit" ><?= $note['header'] ?></textarea>
     <?php if(isset($error['header'])):?>
-        <small style="color:red;"> <?= $error['header']?></small> 
+        <small style="color:red;"> <?= $errors['header']?></small> 
         <?php endif;?>
 
     <div>

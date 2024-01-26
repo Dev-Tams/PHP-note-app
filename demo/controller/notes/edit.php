@@ -1,7 +1,5 @@
 <?php
 
-require core('Validator.php');
-
 use Core\App;
 use Core\Database;
 

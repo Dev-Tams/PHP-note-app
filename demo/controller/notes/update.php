@@ -6,11 +6,11 @@ use Core\Database;
 use Core\Validator;
 
 
-
+//dd($_SERVER);
 $db = App::resolve(Database::class);
  
 
-$currentuser=12222;
+$currentuser=1;
 
 //first display the note selected 
 $note = $db->query ("SELECT * FROM notes WHERE id = :id" ,

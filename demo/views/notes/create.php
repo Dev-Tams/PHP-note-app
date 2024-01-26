@@ -15,18 +15,28 @@
         margin-left: 30px;
     }
 </style>
+
 <form method="post" action="/notes">
 <label for="create" bg-color:red;>Descripion</label>
-    <textarea placeholder="write here!"
-     style="display: block; color:black;" 
-      name="header" id="create" 
-      cols="30" rows="10">
-      <?= $_POST['header'] ?? "" ?>
-    </textarea>
-    <?php if(isset($error['header'])):?>
-        <small style="color:red;"> <?= $error['header']?></small> 
-        <?php endif;?>
-    <input style="display:block; margin-left:100px; margin-top:12px; background-color:blue; width:15%; height:45px;" type="submit" value="submit">
+
+        <textarea
+                                        id="body"
+                                        name="header"
+                                        cols="50"
+                                        rows="8"
+                                        placeholder="Here's an idea for a note..."
+                                    ><?= $_POST['header'] ?? '' ?></textarea>
+
+                                    <?php if (isset($errors['header'])) : ?>
+                                        <p><small style="color:red; margin-top:0px;"><?= $errors['header'] ?></small></p>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        </div>
+
+        <div>
+        <input style="display:block; margin-left:100px; margin-top:12px; background-color:blue; width:15%; height:45px;" type="submit" value="submit">
+        </div>
 </form>
 </body>
 </html>
