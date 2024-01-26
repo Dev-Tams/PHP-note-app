@@ -24,24 +24,24 @@ $note = $db->query ("SELECT * FROM notes WHERE id = :id" ,
  authorize($note['user_id']=$currentuser);
 
  //validate the form input
- $error=[];
+ $errors=[];
 
 
- if (Validator::text($_POST['header'])){
-     $error['header']='this input is required';
+ if (!Validator::text($_POST['header'])){
+     $errors['header']='this input is required';
  }
- if(Validator::maxinput($_POST['header'])){
-     $error['header']="character is above 3500";
+ if(!Validator::maxinput($_POST['header'])){
+     $errors['header']="character is above 3500";
  }
- if(Validator::mininput($_POST['header'])){
-     $error['header']='character is less than 10';
+ if(!Validator::mininput($_POST['header'])){
+     $errors['header']='character is less than 10';
  }
 
  //finally if validated update the database and die the session
 
- if(count($error)){
-    return view('note/edit.php', [
-        'error' => $error,
+ if(!count($errors)){
+    return view('notes/edit.php', [
+        'errors' => $errors,
         'note' => $note
     ]);
  }
