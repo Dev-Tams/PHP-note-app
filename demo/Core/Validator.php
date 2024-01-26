@@ -17,15 +17,18 @@ class Validator{
         return filter_var($value, FILTER_VALIDATE_EMAIL);
     }
 
-public static function maxinput($value, $min=10, $max =3500){
+public static function input($value, $min=1, $max =3500){
     $value = trim($value);
     return strlen($value) >= $min && strlen($value)<= $max;
 }
 
-public static function mininput($value, $min=10){
+public static function minput($value, $min=1){
     $value = trim($value);
-    return strlen($value) >= $min;
+
+    return strlen($value)>= $min;
 }
+
+
     public static function greaterThan(int $value, int $greaterThan): bool{
         return $value > $greaterThan;
     }

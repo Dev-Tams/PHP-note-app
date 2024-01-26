@@ -17,25 +17,20 @@
 </style>
 
 <form method="post" action="/notes">
-<label for="create" bg-color:red;>Descripion</label>
-
+    <label for="create" bg-color:red;>Descripion</label>
         <textarea
-                                        id="body"
-                                        name="header"
-                                        cols="50"
-                                        rows="8"
-                                        placeholder="Here's an idea for a note..."
-                                    ><?= $_POST['header'] ?? '' ?></textarea>
+            id="body"
+            name="header"
+            cols="50"
+            rows="8"
+            placeholder="Here's an idea for a note..."><?= $_POST['header'] ?? '' ?></textarea>
 
-                                    <?php if (isset($errors['header'])) : ?>
-                                        <p><small style="color:red; margin-top:0px;"><?= $errors['header'] ?></small></p>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                        </div>
-
+                <?php if (isset($errors['header'])) : ?>
+                    <p><small style="color:red; margin-top:0px;"><?= $errors['header'] ?></small></p>
+                <?php endif; ?>
+                
         <div>
-        <input style="display:block; margin-left:100px; margin-top:12px; background-color:blue; width:15%; height:45px;" type="submit" value="submit">
+            <input style="display:block; margin-left:100px; margin-top:12px; background-color:blue; width:15%; height:45px;" type="submit" value="submit">
         </div>
 </form>
 </body>

@@ -7,10 +7,15 @@ use Core\Database;
 $db = App::resolve(Database::class);
 $errors = [];
 
-if (! Validator::text($_POST['header'], 1, 1000)) {
-    $errors['header'] = 'A body of no more than 1,000 characters is required.';
+
+if (! Validator::text($_POST['header'], 1, 35000)) {
+    $errors['header'] = 'Notes not more than 3500 characters is required.';
 }
 
+if(! validator::minput($_POST['header'])){
+
+    $errors['header'] = 'share something!';
+}
 if (! empty($errors)) {
     return view("notes/create.php", [
         'errors' => $errors

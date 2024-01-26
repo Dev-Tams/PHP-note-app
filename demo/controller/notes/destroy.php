@@ -8,18 +8,17 @@ $db = App::resolve(Database::class);
 
 
 
-$currentuser=1;
-
-$note = $db->query ("SELECT * FROM notes WHERE id = :id" ,
+$user=1;
+ $db->query ("SELECT * FROM notes WHERE id = :id" ,
 [
  'id' => $_POST['id']
  ])->findorfail();
 
 
 
- authorize($note['user_id']==$currentuser);
 
-    $db->query(" DELETE FROM notes WHERE id =:id", [
+ authorize($note['user_id']=$user);
+  $db->query(" DELETE FROM notes WHERE id =:id", [
         'id' => $_POST['id'],
     ]);
 

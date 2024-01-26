@@ -19,43 +19,47 @@
             
 
         </section>
-        <div class="container">
+
     
      
-        <main class="style-container">
-            <div class="label">
-                <span class="em-style">Email</span>
-                
-                <span class="em-style">Phone</span>
+      
             </div>
-            <form action="/register" method="POST">
+
+
+                <form action="/register" method="POST">
+                    <div class="name">
+                        <label for="name">Name</label>
+                            <input type="text" name="name" id="name" placeholder=" Name cannot be blank">
+                                <?php  if(isset($errors['name'])) : ?>
+                                    <p><small style="color: red; margin-top:0px"><?= $errors['name'] ?></small></p>
+                                 <?php endif;?>
+                    </div><br>
+
+
                 <div class="name-email">
-                    <span class="p-w">
-                    <input type="text" name="email" id="email" placeholder=" Email address" autocomplete="on">
-                    </span>
-                    <div class="email-error">
-                        <!--  -->
-                    </div>
-                    
+                        <label for="email">Email</label>
+                            <span class="p-w">
+                                <input type="text" name="email" id="email" placeholder=" Email address" autocomplete="on">
+                            </span>
+                                <?php  if(isset($errors['email'])) : ?>
+                                    <p><small style="color: red; margin-top:0px"><?= $errors['email'] ?></small></p>
+                                <?php endif;?>
                 </div>
-
+                    
+                
                 <div class="password">
-
-                    <span class="p-w">
-                        <input type="password" name="pass" id="password" minlength="6" placeholder=" Create a Password" autocomplete="on">
-                        <span class="icon delete" title="clear Password"></span>
-                        <span class="icon reveal" title="show password"></span>
-                    </span>
-                    <div class="pass-error"></div>
-                    
+                    <label for="Password">Password</label>
+                            <input type="password" name="password" id="password" minlength="6" placeholder=" Create a Password" autocomplete="on">
+                                <?php if (isset($errors['password'])) : ?>
+                                    <p><small style="color:red; margin-top:0px;"><?= $errors['password'] ?></small></p>
+                                <?php endif; ?>
                 </div>
-                
-                
+                    
                 <div class="submit">
                     <input type="submit" value="Signup"  id="login">
-                    <span id="rotate"></span>
                 </div>
-            </form>
+                
+                </form>
 
             <aside>
                 <p> By creating an account you agree to the <a href="/USER-AG">User agreement</a></p>

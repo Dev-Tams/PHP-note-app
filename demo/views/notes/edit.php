@@ -27,20 +27,21 @@
 </style>
 
 <form method="post" action="/note">
-<input type="hidden" name="_method" value="PATCH">
-    <input type="hidden" name="id" value=" <?= $note['id']?>" >
+    <input type="hidden" name="_method" value="PATCH">
+        <input type="hidden" name="id" value=" <?= $note['id']?>" >
 
     
-<label for="edit" bg-color:red;>Edit</label>
-    <textarea  
-      name="header" id="edit" ><?= $note['header'] ?></textarea>
-    <?php if(isset($error['header'])):?>
-        <small style="color:red;"> <?= $errors['header']?></small> 
+    <label for="edit" bg-color:red;>Edit</label>
+        <textarea  
+            name="header" id="edit" ><?= $note['header'] ?></textarea>
+            
+        <?php if(isset($errors['header'])):?>
+            <small style="color:red;"> <?= $errors['header']?></small> 
         <?php endif;?>
 
     <div>
-    <a href="/notes" class="ed" >Cancel</a>
-    <input type="submit" value="Update">
+        <a href="/notes" class="ed" >Cancel</a>
+            <input type="submit" value="Update">
     </div>
        
 </form>

@@ -10,7 +10,7 @@ use Core\Validator;
 $db = App::resolve(Database::class);
  
 
-$currentuser=1;
+$user=1;
 
 //first display the note selected 
 $note = $db->query ("SELECT * FROM notes WHERE id = :id" ,
@@ -21,7 +21,7 @@ $note = $db->query ("SELECT * FROM notes WHERE id = :id" ,
 
  //then authorixe if the user has access
  
- authorize($note['user_id']=$currentuser);
+ authorize($note['user_id']==$user);
 
  //validate the form input
  $errors=[];
@@ -30,16 +30,16 @@ $note = $db->query ("SELECT * FROM notes WHERE id = :id" ,
  if (!Validator::text($_POST['header'])){
      $errors['header']='this input is required';
  }
- if(!Validator::maxinput($_POST['header'])){
+ if(!Validator::input($_POST['header'], 1,3500)){
      $errors['header']="character is above 3500";
  }
- if(!Validator::mininput($_POST['header'])){
-     $errors['header']='character is less than 10';
+ if(!Validator::minput($_POST['header'])){
+     $errors['header']='Share something';
  }
 
  //finally if validated update the database and die the session
 
- if(!count($errors)){
+ if(count($errors)){
     return view('notes/edit.php', [
         'errors' => $errors,
         'note' => $note

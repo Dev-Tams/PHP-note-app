@@ -22,12 +22,12 @@
 
 
     <h1> NOTE</h1>
-    <a href="/notes" class="text-blue-600 hover:underline"> Go back</a>
-    <p>  <?= htmlspecialchars($note['header'])?></p>
+        <a href="/notes" class="text-blue-600 hover:underline"> Go back</a>
+            <p>  <?= htmlspecialchars($note['header'])?></p>
 
 
     <div>
-    <a href="/note/edit?id=<?= $note['id']?>" target="_parent"> Edit</a>
+        <a href="/note/edit?id=<?= $note['id']?>" target="_parent"> Edit</a>
 
 
 <form action="/note" method="post">

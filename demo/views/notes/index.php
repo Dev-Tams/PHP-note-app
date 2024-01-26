@@ -14,14 +14,14 @@
        
     <p>
         <ul>
-        <?php foreach($notes as $note) :?>
-        <li><a href="/note?id=<?= $note['id']?>">
-            <?=htmlspecialchars($note['header'])?>
-        </li></a>
-        <?php endforeach;?>
+            <?php foreach($notes as $note) :?>
+                <li><a href="/note?id=<?= $note['id']?>">
+                    <?=htmlspecialchars($note['header'])?>
+                </li></a>
+            <?php endforeach;?>
         </ul>
+    
     </p>
-
        <p style="display: block; margin: 40px;"><a href="/note/create">Create Note</a></p>
 </body>
 </html>
