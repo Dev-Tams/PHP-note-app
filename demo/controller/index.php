@@ -68,11 +68,13 @@ $search =  array_filter($books, function($book){
 });
 
 //include ('functions.php');
-require 'nav.controller.php';
 
-$_SESSION['name'] = "Tammy, ";
 
-view("index.php");
+
+view("index.php", [
+   // require 'nav.controller.php'
+
+]);
 
 
 

@@ -22,9 +22,9 @@ $nav_links = [
     ]
 ];
 
-// partial('nav.partial.php');
 
- require partial('nav.partial.php');
+require partial('nav.partial.php');
+ 
 
 
 

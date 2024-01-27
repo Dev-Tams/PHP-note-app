@@ -31,7 +31,7 @@
                         <label for="name">Name</label>
                             <input type="text" name="name" id="name" placeholder=" Name cannot be blank">
                                 <?php  if(isset($errors['name'])) : ?>
-                                    <p><small style="color: red; margin-top:0px"><?= $errors['name'] ?></small></p>
+                                    <p><small style="color: red;"><?= $errors['name'] ?></small></p>
                                  <?php endif;?>
                     </div><br>
 
@@ -42,7 +42,7 @@
                                 <input type="text" name="email" id="email" placeholder=" Email address" autocomplete="on">
                             </span>
                                 <?php  if(isset($errors['email'])) : ?>
-                                    <p><small style="color: red; margin-top:0px"><?= $errors['email'] ?></small></p>
+                                    <p><small style="color: red;"><?= $errors['email'] ?></small></p>
                                 <?php endif;?>
                 </div>
                     
@@ -51,9 +51,11 @@
                     <label for="Password">Password</label>
                             <input type="password" name="password" id="password" minlength="6" placeholder=" Create a Password" autocomplete="on">
                                 <?php if (isset($errors['password'])) : ?>
-                                    <p><small style="color:red; margin-top:0px;"><?= $errors['password'] ?></small></p>
+                                    <p><small style="color:red;"><?= $errors['password'] ?></small></p>
                                 <?php endif; ?>
                 </div>
+
+
                     
                 <div class="submit">
                     <input type="submit" value="Signup"  id="login">
@@ -63,7 +65,7 @@
 
             <aside>
                 <p> By creating an account you agree to the <a href="/USER-AG">User agreement</a></p>
-                <p> Already have an account? <a href="/">Login</a></p>
+                <p> Already have an account? <a href="/login">Login</a></p>
             </aside>
 
     </div>

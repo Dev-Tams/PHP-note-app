@@ -1,0 +1,27 @@
+body{
+    background-image: url(bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    margin-left: 19px;
+}
+
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: aquamarine;
+}
+#nav ul{
+    color: white;
+    list-style-type: none;
+}
+
+span{
+    color: #fff;
+}
