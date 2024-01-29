@@ -24,7 +24,5 @@ $user=1;
 
     
 
-
-    header('location: /notes');
-    exit();
+redirect('/');
    

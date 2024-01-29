@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="css/login.css">
     
     <link rel="stylesheet" href="css/sigin-style.css">
-    <title>Signup</title>
+    <title>Login</title>
 </head>
 <body>
     <style>
     </style>
         <section class="header">
             <header>
-                <h1> Create Account</h1>
+                <h1> Log In</h1>
             </header>
             
 
@@ -26,15 +26,8 @@
             </div>
 
 
-                <form action="/register" method="POST">
-                    <div class="name">
-                        <label for="name">Name</label>
-                            <input type="text" name="name" id="name" placeholder=" Name cannot be blank">
-                                <?php  if(isset($errors['name'])) : ?>
-                                    <p><small style="color: red;"><?= $errors['name'] ?></small></p>
-                                 <?php endif;?>
-                    </div><br>
-
+                <form action="/login" method="POST">
+                  
 
                 <div class="name-email">
                         <label for="email">Email</label>
@@ -58,14 +51,14 @@
 
                     
                 <div class="submit">
-                    <input type="submit" value="Signup"  id="signup">
+                    <input type="submit" value="Login"  id="login">
                 </div>
                 
                 </form>
 
             <aside>
-                <p> By creating an account you agree to the <a href="/USER-AG">User agreement</a></p>
-                <p> Already have an account? <a href="/login">Login</a></p>
+                <p> By Signin in you agree to the <a href="/USER-AG">User agreement</a></p>
+                <p> Dont have an account? <a href="/register">Signup</a></p>
             </aside>
 
     </div>

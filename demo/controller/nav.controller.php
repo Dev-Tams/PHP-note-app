@@ -16,10 +16,6 @@ $nav_links = [
         'name'=> 'Contact Us',
         'link' => '/contact'
     ],
-    [
-        'name'=> 'Notes',
-        'link' => '/notes'
-    ]
 ];
 
 

@@ -51,5 +51,5 @@ $note = $db->query ("SELECT * FROM notes WHERE id = :id" ,
     'header' => $_POST['header']
  ]);
 
- header('location: /notes');
-  die();
+redirect('/');
+

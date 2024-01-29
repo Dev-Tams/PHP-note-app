@@ -6,13 +6,19 @@
                 <a href="<?= $nav['link'];?>" target="_parent">  <?= $nav['name'];?></a>
             </li>
             <?php endforeach;?>
-       
+
+            <li>
+            <?php if ($_SESSION['user'] ?? false):?>
+                  <a href="/notes"><?= urlIs('/notes')?>Notes</a>
+                  <?php endif;?>
+            </li>
+       </ul>
 
        
             <?php if($_SESSION['user']?? false) :?>
-              <form action="#" method="$_POST">
-                <input type="hidden" name="__method" value="PATCH">
-                <input type="button" value="logout">
+              <form method="POST" action="/logout">
+                <input type="hidden" name="_method" value="DELETE">
+                <button>Log out</button>
               </form>
             <?php else : ?>
                 <li><a href="/register"> Register</a></li>

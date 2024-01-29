@@ -50,9 +50,12 @@ $user = $db->query('SELECT * FROM users WHERE email = :email',[
 //if accounts exits, redirect...
 
 if($user){
-    echo "user already exist";
-    header('location: /login');
-    exit();
+    return view('reg-user/create.php', [
+        'errors' => [
+            'email'=> 'User account already exists.'
+        ]
+        ]);
+   
 }else{
     //...else register user
 
@@ -64,9 +67,7 @@ if($user){
 }
 
 //upon success, log in
-$_SESSION['user'] = [
-    'name'=> $name
-];
-
-header('location: /');
-exit();
+login([
+    'name' => $name
+]);
+redirect('/');

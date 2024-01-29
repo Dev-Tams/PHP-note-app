@@ -12,7 +12,7 @@
     <section>
 
         <h1>
-            Hello, <?= $_SESSION['user']['name']?? 'Guest' ?> 
+            Hello, <?= $_SESSION['user']['email']?? 'Guest' ?> 
         </h1>
 
         <h3>
