@@ -32,6 +32,10 @@
         <div>
             <input style="display:block; margin-left:100px; margin-top:12px; background-color:blue; width:15%; height:45px;" type="submit" value="submit">
         </div>
+
+        <div>
+            <a href="/notes"> cancel </a>
+        </div>
 </form>
 </body>
 </html>

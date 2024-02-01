@@ -7,12 +7,13 @@
             </li>
             <?php endforeach;?>
 
-            <li>
+          
             <?php if ($_SESSION['user'] ?? false):?>
-                  <a href="/notes"><?= urlIs('/notes')?>Notes</a>
+              <li>
+                  <a href="/notes">Notes</a>
+              </li>
                   <?php endif;?>
-            </li>
-       </ul>
+           
 
        
             <?php if($_SESSION['user']?? false) :?>

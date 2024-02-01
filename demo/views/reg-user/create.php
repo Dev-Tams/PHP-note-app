@@ -29,7 +29,7 @@
                 <form action="/register" method="POST">
                     <div class="name">
                         <label for="name">Name</label>
-                            <input type="text" name="name" id="name" placeholder=" Name cannot be blank">
+                            <input type="text" name="name" id="name" placeholder=" Name cannot be blank" value="<?= $_POST['name'] ?? '' ?>">
                                 <?php  if(isset($errors['name'])) : ?>
                                     <p><small style="color: red;"><?= $errors['name'] ?></small></p>
                                  <?php endif;?>
@@ -39,7 +39,7 @@
                 <div class="name-email">
                         <label for="email">Email</label>
                             <span class="p-w">
-                                <input type="text" name="email" id="email" placeholder=" Email address" autocomplete="on">
+                                <input type="text" name="email" id="email" placeholder=" Email address" autocomplete="on" value="<?= $_POST['email'] ?? '' ?>">
                             </span>
                                 <?php  if(isset($errors['email'])) : ?>
                                     <p><small style="color: red;"><?= $errors['email'] ?></small></p>
@@ -49,7 +49,7 @@
                 
                 <div class="password">
                     <label for="Password">Password</label>
-                            <input type="password" name="password" id="password" minlength="6" placeholder=" Create a Password" autocomplete="on">
+                            <input type="password" name="password" id="password" minlength="6" placeholder=" Create a Password" autocomplete="on" value="<?= $_POST['password'] ?? '' ?>">
                                 <?php if (isset($errors['password'])) : ?>
                                     <p><small style="color:red;"><?= $errors['password'] ?></small></p>
                                 <?php endif; ?>

@@ -28,5 +28,5 @@ $db->query('INSERT INTO notes(header, user_id) VALUES(:header, :user_id)', [
     'user_id' => 1
 ]);
 
-redirect('/');
+redirect('/notes');
 

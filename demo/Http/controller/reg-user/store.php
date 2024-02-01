@@ -3,9 +3,7 @@
 use Core\App;
 use Core\Database;
 use Core\Validator;
-
-
-
+use Http\Forms\SignupForm;
 
 $name = $_POST['name'];
 $email =$_POST['email'];
@@ -17,27 +15,21 @@ $password = $_POST['password'];
 
 //validate the form inputs
 
-$errors = [];
+//Class validate form has been creaed to handle form validations on Forms Directory
+$form = new SignupForm($name, $email, $password);
 
-if(! Validator::input($name)){
-    $errors['name'] =' Name cannot be blank';
-}
 
-if( ! Validator::email($email)){
-    $errors['email'] = 'please provide a valid email adress';
-}
+//if validations fail
 
-if(! Validator::input($password, 7,255)){
-    $errors['password'] = 'please provide a strong password';
-}
-
-if(! empty($errors)){
+if(! $form->Validate($name, $email, $password)){
     return view('reg-user/create.php', [
-        'errors' => $errors,
+        'errors' => $form->errors()
     ]);
 }
 
-//upon successful validation, checking if account exists
+//upon successful validation, checking if account with same email exists
+
+
 
 
 $db = App::resolve(Database::class);
@@ -70,4 +62,4 @@ if($user){
 login([
     'name' => $name
 ]);
-redirect('/');
+redirect('/notes');

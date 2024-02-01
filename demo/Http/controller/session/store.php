@@ -1,62 +1,51 @@
 <?php
 
-use Core\App;
-use Core\Database;
-use Core\Validator;
+use Core\Authenticator;
+use Core\Session;
+use Http\Forms\validateForm;
+
+
 // instantiate db
 
-$db = App::resolve(Database::class);
 
 
 $email =$_POST['email'];
 $password = $_POST['password'];
 
 
-//validate the inputs
-$errors = [];
+//validates form
+$form = new validateForm();
+if($form->validate($email, $password)){
 
-if( ! Validator::email($email)){
-    $errors['email'] = 'please provide a valid email adress';
+   //if passes, continue to authorize login
+     
+
+   if ((new Authenticator)->attempt($email, $password)){
+       redirect('/');
+   }
+    
+    $form->error('email', 'Invalid Email address or Password');
+   
+     
 }
 
-if(! Validator::input($password)){
-    $errors['password'] = 'please provide valid password';
-}
+Session::flash('errors', $form->errors());
 
+Session::flash('old', [
+    'email' => $_POST['email']
+]);
 
-if(! empty($errors)){
-    return view('session/create.php', [
-        'errors' => $errors
-    ]);
-}
+return redirect('/login');
 
-//match the  credentials
-
-$user = $db->query('SELECT * FROM users WHERE email = :email',[
-    'email' => $email
-])->find();
-
-
-// login user if credentials match
-if($user){
-
-    if(password_verify($password, $user[$password])){
-        login([
-            'email'=> $email
-        ]);
-        redirect('/');
-    }
-
-}
+    
 
 
 //else return an error statement
-    return view('session/create.php', [
-        'errors'=>[
-            'email'=> 'Incorrect Email or Password'
-        ]
-    ]);
+  
 
 
 
-redirect('/');
+
+
+
+

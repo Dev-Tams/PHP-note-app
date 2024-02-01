@@ -32,7 +32,7 @@
                 <div class="name-email">
                         <label for="email">Email</label>
                             <span class="p-w">
-                                <input type="text" name="email" id="email" placeholder=" Email address" autocomplete="on">
+                                <input type="text" name="email" id="email" placeholder=" Email address" value="<?= old('email')?>" autocomplete="on">
                             </span>
                                 <?php  if(isset($errors['email'])) : ?>
                                     <p><small style="color: red;"><?= $errors['email'] ?></small></p>

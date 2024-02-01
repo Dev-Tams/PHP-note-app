@@ -8,7 +8,7 @@
     
 </head>
 <body>
-    <?php require base_path('controller/nav.controller.php');?>
+    <?php require base_path('Http/controller/nav.controller.php');?>
     <section>
 
         <h1>
