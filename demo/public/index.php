@@ -6,11 +6,11 @@ const  BASE_PATH = __DIR__.'/../';
 
 session_start();
 
-spl_autoload_register(function ($class){
-    $class=  str_replace('\\','/', $class);
+// spl_autoload_register(function ($class){
+//     $class=  str_replace('\\','/', $class);
 
-    require base_path($class .'.php');
-});
+//     require base_path($class .'.php');
+// });
 
 require BASE_PATH.('Core/functions.php');
 
