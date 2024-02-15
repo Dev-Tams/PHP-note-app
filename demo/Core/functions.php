@@ -61,7 +61,7 @@ function partial($path){
 
 
 
-function login($user){
+function  login($user){
     $_SESSION['user'] = [
         'email'=> $user['email']
     ];

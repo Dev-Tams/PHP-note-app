@@ -8,30 +8,30 @@
     
 </head>
 <body>
-    <?php require base_path('Http/controller/nav.controller.php');?>
-    <section>
+  <header>
 
+     <h1>Note App</h1>
+        <?php require base_path('Http/controller/nav.controller.php');?>
+    
+     
+  </header>
+
+  <section id="welcome-section">
         <h1>
             Hello, <?= $_SESSION['user']['email']?? 'Guest' ?> 
         </h1>
-
-        <h3>
-            Welcome to  Notes app <br>
-             Powered by the world famous PHP <span>Server side scripting language</span>
-        </h3>
-        <p>
-            save, edit and perform neccessary crud operations with notes from this app, check it out by registering. 
-        </p>
-    </section>
-
-    <div>
-        <p>
-            Built by <a href="https://github.com/Dev-Tams" target="_blank"> Tammy@Github</a>
-        </p>
-    </div>
+    <h2>Welcome to the Note App</h2>
+        <p>This app was built using PHP.</p>
+            <p>
+                Save, edit and perform neccessary crud operations with notes from this app, check it out by registering. 
+            </p>`
+  </section>
+         <p>
+            Built with best pratcices by <a href="https://github.com/Dev-Tams" target="_blank"> Tammy@Github</a>
+        </p>`
+  <script src="script.js"></script>
 </body>
-
-   
+</html>
     
 
 

@@ -7,7 +7,7 @@
             </li>
             <?php endforeach;?>
 
-          
+          <!-- if user logged in, it displays the note nav -->
             <?php if ($_SESSION['user'] ?? false):?>
               <li>
                   <a href="/notes">Notes</a>

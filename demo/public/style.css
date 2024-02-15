@@ -1,27 +1,31 @@
-body{
-    background-image: url(bg.png);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+
+
+/* Header */
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+  }
+  header h1 {
     color: #fff;
-    margin-left: 19px;
-}
-
-
-a{
-    color: white;
+  }
+  
+  /* Navigation */
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  nav ul li {
+    margin-left: 10px;
+  }
+  nav ul li a {
     text-decoration: none;
-}
-
-a:hover{
-    color: aquamarine;
-}
-#nav ul{
-    color: white;
-    list-style-type: none;
-}
-
-span{
     color: #fff;
-}
+  }
+  
+  /* Welcome Section */
+  #welcome-section {
+    padding: 50px;
+    text-align: center;
+  }
