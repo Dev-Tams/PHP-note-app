@@ -23,9 +23,33 @@ header {
     text-decoration: none;
     color: #fff;
   }
+  nav ul li a:hover {
+    text-decoration: underline;
+    animation: slide 0.3s  ease-in-out forwards; 
+  }
+  
+  @keyframes slide {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  } 
+
   
   /* Welcome Section */
   #welcome-section {
     padding: 50px;
     text-align: center;
   }
+
+  .die {
+    display: flex;
+    margin-left: 20px;
+}
+
+p.b{
+
+    margin-left: 20px;
+}

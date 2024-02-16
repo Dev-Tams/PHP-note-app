@@ -26,9 +26,10 @@
                 Save, edit and perform neccessary crud operations with notes from this app, check it out by registering. 
             </p>`
   </section>
-         <p>
+
+         <p class="b">
             Built with best pratcices by <a href="https://github.com/Dev-Tams" target="_blank"> Tammy@Github</a>
-        </p>`
+        </p>
   <script src="script.js"></script>
 </body>
 </html>

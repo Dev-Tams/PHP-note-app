@@ -19,7 +19,7 @@
             <?php if($_SESSION['user']?? false) :?>
               <form method="POST" action="/logout">
                 <input type="hidden" name="_method" value="DELETE">
-                <button>Log out</button>
+                <button class="die">Log out</button>
               </form>
             <?php else : ?>
                 <li><a href="/register"> Register</a></li>

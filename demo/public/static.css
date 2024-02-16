@@ -17,10 +17,28 @@ header {
   nav ul li {
     margin-left: 10px;
   }
+
+  
+
   nav ul li a {
     text-decoration: none;
     color: #777;
   }
+  nav ul li a:hover {
+    text-decoration: underline;
+    animation: slide 0.3s  ease-in-out forwards; 
+  }
+  
+  @keyframes slide {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  } 
+
+  
   
   /* Contact Section */
   #contact-section {
@@ -52,4 +70,8 @@ header {
     background-color: #333;
     color: #fff;
     border: none;
+  }
+
+  .die{
+    display: none;
   }

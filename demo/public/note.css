@@ -1,0 +1,80 @@
+/* style.css */
+
+/* Header */
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+  }
+  header h1 {
+    color: #fff;
+  }
+  
+  nav ul {
+    background-color: #333;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  nav ul li {
+    margin-left: 10px;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  nav ul li a:hover {
+    text-decoration: underline;
+    animation: slide 0.3s  ease-in-out forwards; 
+  }
+  
+  /* Notes Section */
+  #notes-section {
+    padding: 50px;
+    text-align: center;
+  }
+  #notes-section h2 {
+    margin-bottom: 30px;
+  }
+  .notes-list {
+    margin-bottom: 30px;
+  }
+  .notes-list h3 {
+    margin-bottom: 10px;
+  }
+  .notes-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  .notes-list ul li {
+    margin-bottom: 10px;
+  }
+  .create-note {
+    margin-bottom: 30px;
+  }
+  .create-note h3 {
+    margin-bottom: 10px;
+  }
+  .create-note textarea {
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  .create-note button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+  }
+
+  .die {
+    display: flex;
+    margin-left: 20px;
+}
+
+
+/* show section*/
+
+

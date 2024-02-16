@@ -6,26 +6,25 @@
     <link rel="stylesheet" href="/FE/css/login.css">
     <link rel="stylesheet" href="css/login.css">
     
-    <link rel="stylesheet" href="css/sigin-style.css">
+    <link rel="stylesheet" href="form.css">
     <title>Login</title>
 </head>
 <body>
     <style>
     </style>
-        <section class="header">
-            <header>
+        <section id="header">
+           
                 <h1> Log In</h1>
-            </header>
-            
 
         </section>
 
     
      
       
-            </div>
 
+            <div id="form">
 
+               
                 <form action="/login" method="POST">
                   
 
@@ -50,18 +49,16 @@
 
 
                     
-                <div class="submit">
-                    <input type="submit" value="Login"  id="login">
-                </div>
+                    <button>Login</button>
                 
                 </form>
 
-            <aside>
-                <p> By Signin in you agree to the <a href="/USER-AG">User agreement</a></p>
-                <p> Dont have an account? <a href="/register">Signup</a></p>
-            </aside>
-
-    </div>
+                <aside>
+                    <p> By Signin in you agree to the <a href="/USER-AG">User agreement</a></p>
+                    <p> Dont have an account? <a href="/register">Signup</a></p>
+                 </aside>
+            </div>
+    
     
 </body>
 

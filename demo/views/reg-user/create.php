@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="/FE/css/login.css">
     <link rel="stylesheet" href="css/login.css">
     
-    <link rel="stylesheet" href="css/sigin-style.css">
+    <link rel="stylesheet" href="form.css">
     <title>Signup</title>
 </head>
 <body>
     <style>
     </style>
-        <section class="header">
+        <section id="header">
             <header>
                 <h1> Create Account</h1>
             </header>
@@ -23,9 +23,10 @@
     
      
       
-            </div>
+           
+                <div id="form">
 
-
+                   
                 <form action="/register" method="POST">
                     <div class="name">
                         <label for="name">Name</label>
@@ -35,7 +36,7 @@
                                  <?php endif;?>
                     </div><br>
 
-
+               
                 <div class="name-email">
                         <label for="email">Email</label>
                             <span class="p-w">
@@ -57,11 +58,12 @@
 
 
                     
-                <div class="submit">
-                    <input type="submit" value="Signup"  id="signup">
-                </div>
+               <button> Signup</button>
                 
                 </form>
+
+             </div> 
+                
 
             <aside>
                 <p> By creating an account you agree to the <a href="/USER-AG">User agreement</a></p>
